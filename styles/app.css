@@ -1,0 +1,217 @@
+@import url(../bower_components/normalize-css/normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
+@import url("https://fonts.googleapis.com/css?family=Bitter:700");
+/* Core Variables
+  =========================================================================== */
+body {
+  font-family: "Source Sans Pro"; }
+
+body, html {
+  height: 100%; }
+
+.title--services {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 2.5rem; }
+
+.flex-container {
+  display: flex; }
+
+.parallax {
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .parallax.parallax--home {
+    background-image: url("../images/homepage-background.jpeg");
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+  .parallax.parallax--services {
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background.jpg") no-repeat fixed center/cover;
+    padding-bottom: 5rem; }
+
+.overlay {
+  background-color: #222;
+  opacity: .7; }
+  .overlay.overlay--home {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+  .overlay.overlay--services {
+    height: 600px; }
+
+.homepage-text {
+  position: absolute;
+  top: 14rem;
+  text-align: center;
+  width: 100%;
+  z-index: 1000; }
+  .homepage-text div {
+    font-family: 'Bitter';
+    font-weight: 700;
+    color: white; }
+    .homepage-text div:nth-of-type(1) {
+      font-size: 2rem; }
+      @media all and (min-width: 40em) {
+        .homepage-text div:nth-of-type(1) {
+          font-size: 4rem; } }
+    .homepage-text div:nth-of-type(2) {
+      font-size: 1.5rem;
+      color: #5BBEE7; }
+      @media all and (min-width: 40em) {
+        .homepage-text div:nth-of-type(2) {
+          font-size: 3rem; } }
+
+.homepage--about-me {
+  height: auto;
+  background-color: #fff;
+  background-image: url(../images/back.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: contain; }
+  .homepage--about-me p {
+    font-size: 1rem;
+    line-height: 1.75; }
+  .homepage--about-me .profile-img {
+    width: 50%;
+    position: relative;
+    top: -1rem; }
+    .homepage--about-me .profile-img.circle {
+      border-radius: 50%; }
+
+.homepage--services .card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: calc(1rem * 2); }
+  .homepage--services .card .card-title {
+    text-align: center; }
+  .homepage--services .card .services-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px; }
+    .homepage--services .card .services-icon.services-icon--design {
+      background-image: url("../images/services/responsive_icon.svg"); }
+    .homepage--services .card .services-icon.services-icon--seo {
+      background-image: url("../images/services/seo_icon.svg"); }
+    .homepage--services .card .services-icon.services-icon--hosting {
+      background-image: url("../images/services/hosting_icon.svg"); }
+
+#navigation {
+  position: absolute;
+  z-index: 10000;
+  width: 100%; }
+
+.flex-container.navigation {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center; }
+  .flex-container.navigation a.link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-out; }
+    .flex-container.navigation a.link:hover {
+      background-color: #5497CC;
+      color: white; }
+  .flex-container.navigation li {
+    padding: 0.5rem 1rem; }
+    .flex-container.navigation li .nav-logo {
+      width: 100px;
+      background-color: white;
+      padding: 0.5rem;
+      border-radius: 10px; }
+
+@-webkit-keyframes typing {
+  from {
+    width: 0; } }
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent; } }
+.typing-text {
+  border-right: .1em solid white;
+  width: 18.7rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite alternate; }
+  @media all and (min-width: 40em) {
+    .typing-text {
+      width: 37.5rem; } }
+
+.content-padding {
+  padding: 1rem; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.row {
+  overflow: auto; }
+
+.row {
+  margin: auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  width: 100%; }
+  .row.row--nested {
+    padding-left: 0; }
+
+.column {
+  padding: 1rem;
+  padding-left: 0 !important; }
+  .column.column--nested {
+    padding-top: calc((1rem) / 2);
+    padding-bottom: calc((1rem) / 2); }
+    @media all and (max-width: 40em) {
+      .column.column--nested {
+        padding-right: 0; } }
+    @media all and (min-width: 40em) {
+      .column.column--nested:last-of-type {
+        padding-right: 0; } }
+  .column.column--full, .column.column--three-fourths, .column.column--two-thirds, .column.column--half, .column.column--third, .column.column--fourth, .column.column--sixth, .column.column--eighth {
+    width: 100%; }
+  @media all and (min-width: 40em) {
+    .column {
+      float: left; }
+      .column.flow-opposite {
+        float: right; }
+      .column.column--full {
+        float: none;
+        width: 100%; }
+      .column.column--three-fourths {
+        width: 75%; }
+      .column.column--two-thirds {
+        width: 66.666%; }
+      .column.column--half {
+        width: 50%; }
+      .column.column--third {
+        width: 33.333%; }
+      .column.column--fourth {
+        width: 25%; }
+      .column.column--sixth {
+        width: 16.666%; }
+      .column.column--eighth {
+        width: 12.5%; } }
+
+.text-align-center {
+  text-align: center; }
+
+.color-blue {
+  color: #5497CC; }
+
+/*# sourceMappingURL=app.css.map */

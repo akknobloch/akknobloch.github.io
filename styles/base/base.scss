@@ -1,0 +1,127 @@
+body { font-family: "Source Sans Pro"; }
+body, html {
+  height: 100%;
+}
+
+.title--services {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.parallax {
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.parallax--home {
+    background-image: url('../images/homepage-background.jpeg');
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+  &.parallax--services {
+    background:
+    linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.7)
+    ),
+    url('../images/services-background.jpg') no-repeat fixed center / cover;
+    padding-bottom: 5rem;
+  }
+}
+.overlay {
+  background-color: #222;
+  opacity: .7;
+  &.overlay--home {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+  &.overlay--services {
+    height: 600px;
+  }
+}
+
+.homepage-text {
+  position: absolute;
+  top: 14rem;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  div {
+    font-family: 'Bitter';
+    font-weight: 700;
+    color: white;
+    &:nth-of-type(1){
+      font-size: 2rem;
+      @media #{$tablet} {
+        font-size: 4rem;
+      }
+    }
+    &:nth-of-type(2){
+      font-size: 1.5rem;
+      color: $secondary-blue;
+      @media #{$tablet} {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.homepage--about-me {
+  height: auto;
+  background-color: #fff;
+  background-image: url(../images/back.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: contain;
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .profile-img {
+    width: 50%;
+    position: relative;
+    top: -1rem;
+    &.circle {
+      border-radius: 50%;
+    }
+  }
+}
+
+.homepage--services {
+  .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: calc(#{$grid-gutter} * 2);
+    .card-title {
+      text-align: center;
+    }
+    .services-icon {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      &.services-icon--design {
+        background-image: url('../images/services/responsive_icon.svg');
+      }
+      &.services-icon--seo {
+        background-image: url('../images/services/seo_icon.svg');
+      }
+      &.services-icon--hosting {
+        background-image: url('../images/services/hosting_icon.svg');
+      }
+    }
+  }
+}

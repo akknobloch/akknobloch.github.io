@@ -1,0 +1,31 @@
+#navigation { position: absolute; z-index: 10000; width: 100%;}
+.flex-container {
+  &.navigation {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    a.link {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease-out;
+      &:hover {
+        background-color: $primary-blue;
+        color: white;
+      }
+    }
+    li {
+      padding: 0.5rem 1rem;
+      .nav-logo {
+        width: 100px;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+      }
+    }
+  }
+}
