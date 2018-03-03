@@ -74,12 +74,15 @@ body, html {
         .homepage-text div:nth-of-type(2) {
           font-size: 3rem; } }
 
-.homepage--about-me .profile-img {
-  width: 50%;
-  position: relative;
-  top: -1rem; }
-  .homepage--about-me .profile-img.circle {
-    border-radius: 50%; }
+.homepage--about-me {
+  margin-top: -6rem;
+  padding-top: 6rem; }
+  .homepage--about-me .profile-img {
+    width: 50%;
+    position: relative;
+    top: -1rem; }
+    .homepage--about-me .profile-img.circle {
+      border-radius: 50%; }
 
 .homepage--services .card {
   background-color: rgba(255, 255, 255, 0.9);
@@ -99,9 +102,41 @@ body, html {
     .homepage--services .card .services-icon.services-icon--hosting {
       background-image: url("../images/services/hosting_icon.svg"); }
 
-.homepage--my-work .my-work--image {
+.homepage--my-work {
+  margin-bottom: 20rem; }
+  .homepage--my-work .my-work--image {
+    width: 100%;
+    max-width: 600px; }
+
+.footer {
+  height: 20rem;
   width: 100%;
-  max-width: 600px; }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -1; }
+  .footer .title {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2; }
+  .footer .contact-area {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 20px 30px;
+    height: 100%;
+    background: #e96443;
+    background: linear-gradient(to right, #5497CC 0%, #5BBEE7 100%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    text-decoration: none; }
 
 #navigation {
   position: absolute;
@@ -117,10 +152,11 @@ body, html {
   .flex-container.navigation a.link {
     text-decoration: none;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 5px;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease-out; }
+    transition: background-color 0.3s ease-out;
+    margin: 0 1rem; }
     .flex-container.navigation a.link:hover {
       background-color: #5497CC;
       color: white; }
@@ -172,6 +208,7 @@ body, html {
 /* Actions Styles
   =========================================================================== */
 .button, button, input[type='submit'], input[type='reset'] {
+  border-radius: 5px;
   -webkit-font-smoothing: auto;
   font-weight: 600;
   margin: 0.05rem 0.25rem;
@@ -192,8 +229,7 @@ body, html {
   .button.button--primary, button.button--primary, input[type='submit'].button--primary, input[type='reset'].button--primary {
     background-color: #5497CC;
     color: white;
-    border: 2px solid #5497CC;
-    border-radius: 5px; }
+    border: 2px solid #5497CC; }
     .button.button--primary:hover, button.button--primary:hover, input[type='submit'].button--primary:hover, input[type='reset'].button--primary:hover {
       background-color: #367eb7;
       border: 2px solid #367eb7; }
@@ -204,6 +240,15 @@ body, html {
       color: white;
       background-color: #5497CC;
       border: 2px solid #5497CC; }
+  .button.button--transparent, button.button--transparent, input[type='submit'].button--transparent, input[type='reset'].button--transparent {
+    background-color: transparent;
+    border: 2px solid #5497CC; }
+    .button.button--transparent.white, button.button--transparent.white, input[type='submit'].button--transparent.white, input[type='reset'].button--transparent.white {
+      border: 2px solid white;
+      color: white; }
+  .button.button--large, button.button--large, input[type='submit'].button--large, input[type='reset'].button--large {
+    padding: 1rem;
+    font-size: 1.2rem; }
 
 .white-background--lined, .homepage--about-me, .homepage--my-work {
   height: auto;
@@ -212,6 +257,11 @@ body, html {
   background-repeat: repeat-y;
   background-position: center center;
   background-size: contain; }
+
+.inner-shadow, .footer .contact-area {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000; }
 
 .content-padding {
   padding: 1rem; }
