@@ -70,3 +70,20 @@ $('a').click(function(){
     }, 500);
     return false;
 });
+
+//Menu toggle
+function toggleMenu() {
+  document.getElementById("mobile-menu").classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
+}
+
+//Scroll to bottom
+function ScrollToBottom() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function MobileScrollToBottom() {
+  document.getElementById("mobile-menu").classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
+  window.scrollTo(0,document.body.scrollHeight);
+}

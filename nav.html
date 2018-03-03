@@ -1,4 +1,4 @@
-<header>
+<header class="hide-on-mobile">
   <div class="row">
     <div class="column column--full">
       <nav>
@@ -7,9 +7,51 @@
           <a href="#my-work" class="link"><li>Portfolio</li></a>
           <li class="logo"><img src="images/logo.svg" alt="AK Design" class="nav-logo"></li>
           <a href="#services" class="link"><li>Services</li></a>
-          <a href="#contact" class="link"><li>Contact</li></a>
+          <a href="#contact" onclick="ScrollToBottom()" class="link"><li>Contact</li></a>
         </ul>
       </nav>
+    </div>
+  </div>
+</header>
+
+<header class="hide-on-tablet hide-on-desktop">
+  <div class="row">
+    <div class="column column--full">
+      <ul class="flex-container navigation">
+        <li class="logo"><img src="images/logo.svg" alt="AK Design" class="nav-logo"></li>
+        <li onclick="toggleMenu()">
+          <div class="burger">
+            <div class="burger__patty"></div>
+            <div class="burger__patty"></div>
+            <div class="burger__patty"></div>
+          </div>
+        </li>
+      </ul>
+
+      <aside id="mobile-menu">
+        <div class="row">
+          <div class="column column--full">
+            <ul class="flex-container navigation">
+              <li class="logo"><img src="images/logo.svg" alt="AK Design" class="nav-logo"></li>
+              <li onclick="toggleMenu()">
+                <div class="burger burger--close">
+                  <div class="burger__patty"></div>
+                  <div class="burger__patty"></div>
+                  <div class="burger__patty"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul class="flex-container navigation navigation--mobile">
+            <a href="#about" class="link" onclick="toggleMenu()"><li>About</li></a>
+            <a href="#my-work" class="link" onclick="toggleMenu()"><li>Portfolio</li></a>
+            <a href="#services" class="link" onclick="toggleMenu()"><li>Services</li></a>
+            <a href="#contact-us" class="link" onclick="MobileScrollToBottom()"><li>Contact</li></a>
+          </ul>
+        </nav>
+      </aside>
     </div>
   </div>
 </header>

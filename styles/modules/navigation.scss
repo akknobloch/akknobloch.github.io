@@ -21,6 +21,10 @@
     }
     li {
       padding: 0.5rem 1rem;
+      &.logo {
+        margin-right: auto;
+        @media #{$tablet} { margin-right: 0;}
+      }
       .nav-logo {
         width: 100px;
         background-color: white;
@@ -28,5 +32,75 @@
         border-radius: 10px;
       }
     }
+    &.navigation--mobile {
+      flex-direction: row;
+      flex-wrap: wrap;
+      a {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@mixin easeOut {
+  transition: all .4s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.burger {
+  //position: absolute;
+  z-index: 10;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  transform: rotateY(0);
+  @include easeOut;
+
+  &__patty {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 4px 0;
+    background: white;
+    border-radius: 10px;
+    @include easeOut;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // transform burger into 'x'
+  &--close {
+    transform: rotate(180deg);
+
+    .burger__patty {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -4px);
+      }
+    }
+  }
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $linear-grandient-blue;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  z-index: 2;
+  &.open {
+    opacity: 1;
+    visibility: visible;
   }
 }

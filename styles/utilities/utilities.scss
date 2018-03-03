@@ -79,3 +79,11 @@
 .no-margin--top { margin-top: 0 !important;}
 
 .color-blue { color: $primary-blue; }
+
+.hide-on-mobile { @media #{$phone} { display: none !important; } }
+.hide-on-tablet { @media #{$tablet} { display: none !important; } }
+.hide-on-desktop { @media #{$desktop} { display: none !important; } }
+
+.no-scroll {
+  overflow: hidden;
+}

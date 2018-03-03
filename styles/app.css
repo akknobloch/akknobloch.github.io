@@ -162,11 +162,63 @@ body, html {
       color: white; }
   .flex-container.navigation li {
     padding: 0.5rem 1rem; }
+    .flex-container.navigation li.logo {
+      margin-right: auto; }
+      @media all and (min-width: 40em) {
+        .flex-container.navigation li.logo {
+          margin-right: 0; } }
     .flex-container.navigation li .nav-logo {
       width: 100px;
       background-color: white;
       padding: 0.5rem;
       border-radius: 10px; }
+  .flex-container.navigation.navigation--mobile {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .flex-container.navigation.navigation--mobile a {
+      width: 100%;
+      text-align: center;
+      font-size: 2rem; }
+
+.burger {
+  z-index: 10;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  transform: rotateY(0);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+  .burger__patty {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 4px 0;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+    .burger__patty:last-child {
+      margin-bottom: 0; }
+  .burger--close {
+    transform: rotate(180deg); }
+    .burger--close .burger__patty:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 5px); }
+    .burger--close .burger__patty:nth-child(2) {
+      opacity: 0; }
+    .burger--close .burger__patty:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -4px); }
+
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #5497CC 0%, #5BBEE7 100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  z-index: 2; }
+  aside.open {
+    opacity: 1;
+    visibility: visible; }
 
 @-webkit-keyframes typing {
   from {
@@ -329,5 +381,20 @@ body, html {
 
 .color-blue {
   color: #5497CC; }
+
+@media all and (max-width: 40em) {
+  .hide-on-mobile {
+    display: none !important; } }
+
+@media all and (min-width: 40em) {
+  .hide-on-tablet {
+    display: none !important; } }
+
+@media all and (min-width: 64em) {
+  .hide-on-desktop {
+    display: none !important; } }
+
+.no-scroll {
+  overflow: hidden; }
 
 /*# sourceMappingURL=app.css.map */
