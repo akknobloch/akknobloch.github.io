@@ -1,0 +1,72 @@
+/* Actions Variables
+  =========================================================================== */
+
+$buttons: ".button, button, input[type='submit'], input[type='reset']";
+$button-disabled: "&[disabled], &.disabled, &.button--disabled";
+
+/* Actions Extendables
+  =========================================================================== */
+
+%action {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 50ms ease-in-out;
+  &:first-of-type { margin-left: 0; } //Clears left margin of first %action element
+  &:last-of-type { margin-right: 0; } //Clears right margin of last %action element
+  &:hover { transition: all .1s ease-in-out; }
+}
+
+/* Actions Styles
+  =========================================================================== */
+#{$buttons} {
+  @extend %action;
+
+  -webkit-font-smoothing: auto;
+  font-weight: 600;
+  margin: 0.05rem 0.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+
+  @media #{$tablet} {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    padding-top: 0.45rem;
+  }
+
+  #{$button-disabled} {
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &.button-block {
+    display: block !important;
+    width: 100%;
+  }
+
+  &.button--primary {
+    background-color: $primary-blue;
+    color: white;
+    border: 2px solid $primary-blue;
+    border-radius: 5px;
+    &:hover {
+      background-color: darken($primary-blue, 10%);
+      border: 2px solid darken($primary-blue, 10%);
+    }
+  }
+
+  &.button--border {
+    background-color: transparent;
+    color: $primary-blue;
+    &:hover {
+      color: white;
+      background-color: $primary-blue;
+      border: 2px solid $primary-blue;
+    }
+  }
+}

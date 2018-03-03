@@ -9,10 +9,15 @@ body {
 body, html {
   height: 100%; }
 
-.title--services {
+.section--title {
   font-size: 2.5rem;
-  color: white;
   margin-top: 2.5rem; }
+  .section--title.white {
+    color: white; }
+
+.p-content {
+  font-size: 1rem;
+  line-height: 1.75; }
 
 .flex-container {
   display: flex; }
@@ -69,22 +74,12 @@ body, html {
         .homepage-text div:nth-of-type(2) {
           font-size: 3rem; } }
 
-.homepage--about-me {
-  height: auto;
-  background-color: #fff;
-  background-image: url(../images/back.svg);
-  background-repeat: repeat-y;
-  background-position: center center;
-  background-size: contain; }
-  .homepage--about-me p {
-    font-size: 1rem;
-    line-height: 1.75; }
-  .homepage--about-me .profile-img {
-    width: 50%;
-    position: relative;
-    top: -1rem; }
-    .homepage--about-me .profile-img.circle {
-      border-radius: 50%; }
+.homepage--about-me .profile-img {
+  width: 50%;
+  position: relative;
+  top: -1rem; }
+  .homepage--about-me .profile-img.circle {
+    border-radius: 50%; }
 
 .homepage--services .card {
   background-color: rgba(255, 255, 255, 0.9);
@@ -103,6 +98,10 @@ body, html {
       background-image: url("../images/services/seo_icon.svg"); }
     .homepage--services .card .services-icon.services-icon--hosting {
       background-image: url("../images/services/hosting_icon.svg"); }
+
+.homepage--my-work .my-work--image {
+  width: 100%;
+  max-width: 600px; }
 
 #navigation {
   position: absolute;
@@ -149,6 +148,70 @@ body, html {
   @media all and (min-width: 40em) {
     .typing-text {
       width: 37.5rem; } }
+
+/* Actions Variables
+  =========================================================================== */
+/* Actions Extendables
+  =========================================================================== */
+.button, button, input[type='submit'], input[type='reset'] {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 50ms ease-in-out; }
+  .button:first-of-type, button:first-of-type, input[type='submit']:first-of-type, input[type='reset']:first-of-type {
+    margin-left: 0; }
+  .button:last-of-type, button:last-of-type, input[type='submit']:last-of-type, input[type='reset']:last-of-type {
+    margin-right: 0; }
+  .button:hover, button:hover, input[type='submit']:hover, input[type='reset']:hover {
+    transition: all .1s ease-in-out; }
+
+/* Actions Styles
+  =========================================================================== */
+.button, button, input[type='submit'], input[type='reset'] {
+  -webkit-font-smoothing: auto;
+  font-weight: 600;
+  margin: 0.05rem 0.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center; }
+  @media all and (min-width: 40em) {
+    .button, button, input[type='submit'], input[type='reset'] {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      padding-top: 0.45rem; } }
+  .button[disabled], .button.disabled, .button.button--disabled, button[disabled], button.disabled, button.button--disabled, input[type='submit'][disabled], input[type='submit'].disabled, input[type='submit'].button--disabled, input[type='reset'][disabled], input[type='reset'].disabled, input[type='reset'].button--disabled {
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none; }
+  .button.button-block, button.button-block, input[type='submit'].button-block, input[type='reset'].button-block {
+    display: block !important;
+    width: 100%; }
+  .button.button--primary, button.button--primary, input[type='submit'].button--primary, input[type='reset'].button--primary {
+    background-color: #5497CC;
+    color: white;
+    border: 2px solid #5497CC;
+    border-radius: 5px; }
+    .button.button--primary:hover, button.button--primary:hover, input[type='submit'].button--primary:hover, input[type='reset'].button--primary:hover {
+      background-color: #367eb7;
+      border: 2px solid #367eb7; }
+  .button.button--border, button.button--border, input[type='submit'].button--border, input[type='reset'].button--border {
+    background-color: transparent;
+    color: #5497CC; }
+    .button.button--border:hover, button.button--border:hover, input[type='submit'].button--border:hover, input[type='reset'].button--border:hover {
+      color: white;
+      background-color: #5497CC;
+      border: 2px solid #5497CC; }
+
+.white-background--lined, .homepage--about-me, .homepage--my-work {
+  height: auto;
+  background-color: #fff;
+  background-image: url(../images/back.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: contain; }
 
 .content-padding {
   padding: 1rem; }
@@ -210,6 +273,9 @@ body, html {
 
 .text-align-center {
   text-align: center; }
+
+.no-margin--top {
+  margin-top: 0 !important; }
 
 .color-blue {
   color: #5497CC; }
