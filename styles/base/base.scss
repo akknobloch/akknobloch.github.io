@@ -137,17 +137,21 @@ body, html {
     width: 100%;
     max-width: 600px;
   }
-  margin-bottom: 20rem;
+  @media #{$desktop} {
+    margin-bottom: 20rem;
+  }
 }
 
 .footer {
   height: 20rem;
   width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
   z-index: -1;
   -webkit-overflow-scrolling: touch;
+  @media #{$desktop} {
+    position: fixed;
+  }
   .title {
     display: block;
     font-size: 2.5rem;

@@ -109,20 +109,23 @@ body, html {
     .homepage--services .card .services-icon.services-icon--hosting {
       background-image: url("../images/services/hosting_icon.svg"); }
 
-.homepage--my-work {
-  margin-bottom: 20rem; }
-  .homepage--my-work .my-work--image {
-    width: 100%;
-    max-width: 600px; }
+.homepage--my-work .my-work--image {
+  width: 100%;
+  max-width: 600px; }
+@media all and (min-width: 64em) {
+  .homepage--my-work {
+    margin-bottom: 20rem; } }
 
 .footer {
   height: 20rem;
   width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
   z-index: -1;
   -webkit-overflow-scrolling: touch; }
+  @media all and (min-width: 64em) {
+    .footer {
+      position: fixed; } }
   .footer .title {
     display: block;
     font-size: 2.5rem;
