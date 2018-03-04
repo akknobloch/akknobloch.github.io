@@ -87,3 +87,9 @@ function MobileScrollToBottom() {
   document.body.classList.toggle("no-scroll");
   window.scrollTo(0,document.body.scrollHeight);
 }
+
+//Keep scrolled effect
+$(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('.parallax--home').css('background-position', 'left ' + ((scrolledY)) + 'px');
+});
