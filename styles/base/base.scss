@@ -35,12 +35,21 @@ body, html {
     min-height: 100%;
   }
   &.parallax--services {
+    background-color: #ededed;
     background:
     linear-gradient(
       rgba(34, 34, 34, 0.7),
       rgba(34, 34, 34, 0.7)
     ),
-    url('../images/services-background.jpg') no-repeat fixed center / cover;
+    url('../images/services-background.jpg') no-repeat scroll center / cover;
+    @media #{$tablet} {
+      background:
+      linear-gradient(
+        rgba(34, 34, 34, 0.7),
+        rgba(34, 34, 34, 0.7)
+      ),
+      url('../images/services-background.jpg') no-repeat fixed center / cover;
+    }
     /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
@@ -138,6 +147,11 @@ body, html {
   }
   @media #{$desktop} {
     margin-bottom: 20rem;
+  }
+  .rose-doula {
+    @media #{$tablet} {
+      float: right;
+    }
   }
 }
 
