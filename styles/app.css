@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter:700");
 /* Core Variables
   =========================================================================== */
+@import url(../bower_components/tingle/dist/tingle.min.css);
 body {
   font-family: "Source Sans Pro"; }
 
@@ -319,6 +320,92 @@ aside {
     padding: 1rem;
     font-size: 1.2rem; }
 
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s; }
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  background-color: #ededed;
+  border-radius: 50%;
+  margin: 0.8rem 0;
+  padding: 0.7rem;
+  line-height: 1.3rem; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+.modal-header {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border-bottom: 2px solid #ededed; }
+
+.modal-body {
+  padding: 0.5rem 1rem; }
+
+.modal-footer {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border-top: 2px solid #ededed; }
+
 .white-background--lined, .homepage--about-me, .homepage--my-work {
   height: auto;
   background-color: #fff;
@@ -412,6 +499,7 @@ aside {
     display: none !important; } }
 
 .no-scroll {
-  overflow: hidden; }
+  overflow: hidden;
+  position: fixed; }
 
 /*# sourceMappingURL=app.css.map */
