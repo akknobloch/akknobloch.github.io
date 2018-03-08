@@ -5,18 +5,12 @@ function validEmail(email) { // see:
 }
 
 function validateHuman(honeypot) {
-  // if (honeypot) {  //if hidden form filled up
-  //   console.log("Robot Detected!");
-  //   return true;
-  // } else {
-  //   console.log("Welcome Human!");
-  // }
-  if (grecaptcha.getResponse() == ""){
+  if (honeypot) {  //if hidden form filled up
     console.log("Robot Detected!");
-       return true;
-} else {
+    return true;
+  } else {
     console.log("Welcome Human!");
-}
+  }
 }
 
 // get all data in form and return object
@@ -72,11 +66,12 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
 
-  /* OPTION: Remove this comment to enable SPAM prevention, see README.md
-  if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-    return false;
-  }
-  */
+   var recaptcha = $("#g-recaptcha-response").val();
+   if (recaptcha === "") {
+      event.preventDefault();
+      alert("Please check the recaptcha");
+      return false;
+   }
 
   if( !validEmail(data.email) ) {   // if email is valid show
     var url = event.target.action;  //
@@ -108,3 +103,12 @@ function loaded() {
   form.addEventListener("submit", handleFormSubmit, false);
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
+
+// $("form").submit(function(event) {
+//
+//    var recaptcha = $("#g-recaptcha-response").val();
+//    if (recaptcha === "") {
+//       event.preventDefault();
+//       alert("Please check the recaptcha");
+//    }
+// });
