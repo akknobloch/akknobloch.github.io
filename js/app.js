@@ -3,6 +3,21 @@ $(document).ready(function(){
   $.get("nav.html", function(data) {
     $("#navigation").html(data);
   });
+
+  //Text Typing
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
+  document.body.appendChild(css);
 });
 
 //Text Typing effectvar TxtRotate = function(el, toRotate, period) {
@@ -45,46 +60,27 @@ TxtRotate.prototype.tick = function() {
   setTimeout(function() {
     that.tick();
   }, delta);
-};
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
-  document.body.appendChild(css);
-};
+  //Smooth Scrolling
+  $('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
-//Smooth Scrolling
-window.onload = function(){
-$('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1000);
-    }
-});
-}
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+          $('.parallax--home').css('background-position', 'left ' + (('scrollTop')) + 'px');
+	        window.location.hash = target;
+	    });
+	});
+};
 
 //Menu toggle
 function toggleMenu() {
   document.getElementById("mobile-menu").classList.toggle("open");
   document.body.classList.toggle("no-scroll");
-}
-
-//Scroll to bottom
-function ScrollToBottom() {
-  window.scrollTo(0,document.body.scrollHeight);
 }
 
 function MobileScrollToBottom() {
