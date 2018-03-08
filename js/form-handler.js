@@ -5,12 +5,18 @@ function validEmail(email) { // see:
 }
 
 function validateHuman(honeypot) {
-  if (honeypot) {  //if hidden form filled up
+  // if (honeypot) {  //if hidden form filled up
+  //   console.log("Robot Detected!");
+  //   return true;
+  // } else {
+  //   console.log("Welcome Human!");
+  // }
+  if (grecaptcha.getResponse() == ""){
     console.log("Robot Detected!");
-    return true;
-  } else {
+       return true;
+} else {
     console.log("Welcome Human!");
-  }
+}
 }
 
 // get all data in form and return object
