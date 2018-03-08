@@ -10,19 +10,21 @@ window.onload = function(){
 
   // When the user clicks the button, open the modal
   btn.onclick = function() {
-    console.log("Test");
-      modal.style.display = "block";
+    modal.style.display = "block";
+    document.body.classList.toggle("no-scroll");
   }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
       modal.style.display = "none";
+      document.body.classList.toggle("no-scroll");
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
       if (event.target == modal) {
           modal.style.display = "none";
+          document.body.classList.toggle("no-scroll");
       }
   }
 }

@@ -328,7 +328,9 @@ aside {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 50px;
+  /* Location of the box */
+  padding-bottom: 50px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -350,12 +352,16 @@ aside {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
+  max-width: 550px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s; }
+  @media all and (min-width: 40em) {
+    .modal-content {
+      width: 75%; } }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -405,6 +411,62 @@ aside {
   background-color: #fff;
   color: black;
   border-top: 2px solid #ededed; }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+  fieldset label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    text-align: left; }
+    fieldset label.inline {
+      font-size: 1rem;
+      display: inline-block;
+      font-weight: normal;
+      cursor: pointer; }
+  fieldset select, fieldset textarea, fieldset input[type="date"], fieldset input[type="time"], fieldset input[type="email"], fieldset input[type="month"], fieldset input[type="number"], fieldset input[type="password"], fieldset input[type="tel"], fieldset input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0.6rem;
+    width: 100%; }
+    fieldset select:focus, fieldset textarea:focus, fieldset input[type="date"]:focus, fieldset input[type="time"]:focus, fieldset input[type="email"]:focus, fieldset input[type="month"]:focus, fieldset input[type="number"]:focus, fieldset input[type="password"]:focus, fieldset input[type="tel"]:focus, fieldset input[type="text"]:focus {
+      border-color: #5497CC;
+      outline-color: transparent;
+      outline-style: none; }
+  fieldset input[type=checkbox],
+  fieldset input[type=radio] {
+    float: left;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem; }
+  fieldset textarea {
+    resize: vertical; }
+  fieldset select {
+    cursor: pointer; }
+  fieldset .input--add-on {
+    display: flex; }
+    fieldset .input--add-on .add-on--field,
+    fieldset .input--add-on .add-on--before,
+    fieldset .input--add-on .add-on--after {
+      width: auto;
+      flex-grow: 1; }
+    fieldset .input--add-on .add-on--field,
+    fieldset .input--add-on .add-on--before {
+      border-radius: 5px 0 0 5px;
+      border-right: none; }
+    fieldset .input--add-on .add-on--after {
+      border-radius: 0 5px 5px 0; }
+    fieldset .input--add-on select.add-on--after,
+    fieldset .input--add-on select.add-on--before {
+      padding-right: 2rem;
+      flex: none; }
 
 .white-background--lined, .homepage--about-me, .homepage--my-work {
   height: auto;
@@ -499,7 +561,6 @@ aside {
     display: none !important; } }
 
 .no-scroll {
-  overflow: hidden;
-  position: fixed; }
+  overflow: hidden; }
 
 /*# sourceMappingURL=app.css.map */

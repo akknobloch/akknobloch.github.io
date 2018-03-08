@@ -1,0 +1,84 @@
+$inputs: 'select, textarea,input[type="date"],input[type="time"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    text-align: left;
+
+    &.inline {
+      font-size: 1rem;
+      display: inline-block;
+      font-weight: normal;
+      cursor: pointer;
+    }
+  }
+
+  //Supports all standard input types
+  #{$inputs} {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 0.6rem;
+    width: 100%;
+
+    &:focus {
+      border-color: $primary-blue;
+      outline-color: transparent;
+      outline-style: none;
+    }
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    float: left;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  //Add class to containing fieldset or div to display a button
+  .input--add-on {
+    display: flex;
+
+    .add-on--field,
+    .add-on--before,
+    .add-on--after {
+      width: auto;
+      flex-grow: 1;
+    }
+
+    .add-on--field,
+    .add-on--before {
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+
+    .add-on--after {
+      border-radius: 0 5px 5px 0;
+    }
+
+    select.add-on--after,
+    select.add-on--before {
+      padding-right: 2rem;
+      flex: none;
+    }
+  }
+}
