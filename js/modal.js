@@ -12,6 +12,7 @@ window.onload = function(){
   btn.onclick = function() {
     modal.style.display = "block";
     document.body.classList.toggle("no-scroll");
+    document.getElementById("scrollToTop").style.display = "none";
   }
 
   // When the user clicks on <span> (x), close the modal

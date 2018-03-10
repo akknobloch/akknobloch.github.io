@@ -14,8 +14,12 @@
   <script src="js/app.js"></script>
   <script src="js/modal.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <button class="scroll-to-top" onclick="ScrollToTop()" id="scrollToTop" title="Go to top">
+    <i class="fa fa-angle-up" style="font-size:36px"></i>
+  </button>
   <section class="homepage-text">
     <div><span
      class="txt-rotate"
@@ -47,24 +51,24 @@
           <h1 class="section--title white">WEBSITE <span class="color-blue">SERVICES</span></h1>
         </div>
         <div class="column column--third">
-          <div class="card">
+          <div class="card design">
             <div class="services-icon services-icon--design"></div>
             <h2 class="card-title">Responsive Design</h2>
             <p>Your site will work perfectly on desktop, tablet and mobile, so customers have the best possible experience on every device.</p>
           </div>
         </div>
         <div class="column column--third">
-          <div class="card">
+          <div class="card seo">
             <div class="services-icon services-icon--seo"></div>
             <h2 class="card-title">SEO Help</h2>
             <p>I make sure your site is Google-friendly by customizing the SEO settings to make it easier for customers to find you online.</p>
           </div>
         </div>
         <div class="column column--third">
-          <div class="card">
-            <div class="services-icon services-icon--hosting"></div>
-            <h2 class="card-title">Reliable Hosting</h2>
-            <p>All of my websites are hosted on Amazon’s worldwide hosting service, so you know your site will always be available online.</p>
+          <div class="card analytics">
+            <div class="services-icon services-icon--analytics"></div>
+            <h2 class="card-title">Detailed Analytics</h2>
+            <p>I provide analytics that shows how many visitors your site gets, where they are coming from, and the pages that they visited.</p>
           </div>
         </div>
       </div>
@@ -136,9 +140,11 @@
               </fieldset>
 
               <div class="g-recaptcha" data-sitekey="6Lc8ZksUAAAAAAtUOyiaOtOPlbjNPK8dhRntoLdn"></div>
-              <br/>
-              <input class="button button--primary" id="submit" name="submit" type="submit" value="Submit">
-
+              <div class="row row--nested">
+                <div class="column column--full">
+                  <input class="button button--primary" id="submit" name="submit" type="submit" value="Submit">
+                </div>
+              </div>
           </form>
           <div style="display: none;" id="thankyou_message">
             <h2>Thank you for contacting me!</h2>

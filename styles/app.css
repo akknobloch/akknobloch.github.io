@@ -104,13 +104,23 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px; }
+    height: 100px;
+    transition: ease-out 0.3s; }
     .homepage--services .card .services-icon.services-icon--design {
-      background-image: url("../images/services/responsive_icon.svg"); }
+      background-image: url("../images/services/responsive_hover.svg"); }
     .homepage--services .card .services-icon.services-icon--seo {
-      background-image: url("../images/services/seo_icon.svg"); }
-    .homepage--services .card .services-icon.services-icon--hosting {
-      background-image: url("../images/services/hosting_icon.svg"); }
+      background-image: url("../images/services/seo_hover.svg"); }
+    .homepage--services .card .services-icon.services-icon--analytics {
+      background-image: url("../images/services/analytics_hover.svg"); }
+  .homepage--services .card.design:hover .services-icon--design {
+    background-image: url("../images/services/responsive.svg");
+    transform: scale(1.1); }
+  .homepage--services .card.seo:hover .services-icon--seo {
+    background-image: url("../images/services/seo.svg");
+    transform: scale(1.1); }
+  .homepage--services .card.analytics:hover .services-icon--analytics {
+    background-image: url("../images/services/analytics.svg");
+    transform: scale(1.1); }
 
 .homepage--my-work .my-work--image {
   width: 100%;
@@ -154,6 +164,25 @@ body, html {
     font-weight: 300;
     overflow: hidden;
     text-decoration: none; }
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #5497CC;
+  color: white;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-radius: 4px; }
+  .scroll-to-top:hover {
+    background-color: #367eb7; }
+  .scroll-to-top i {
+    margin-top: -0.3rem; }
 
 #navigation {
   position: absolute;
