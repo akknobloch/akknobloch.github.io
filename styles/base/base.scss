@@ -27,7 +27,7 @@ body, html {
   background-size: cover;
   &.parallax--home {
     background-color: #ededed;
-    background-image: url('../images/homepage-background.jpeg');
+    background-image: url('../images/homepage-background-min.jpeg');
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     /* Preserve aspect ratio */
@@ -41,14 +41,14 @@ body, html {
       rgba(34, 34, 34, 0.7),
       rgba(34, 34, 34, 0.7)
     ),
-    url('../images/services-background.jpg') no-repeat scroll center / cover;
+    url('../images/services-background-min.jpg') no-repeat scroll center / cover;
     @media #{$tablet} {
       background:
       linear-gradient(
         rgba(34, 34, 34, 0.7),
         rgba(34, 34, 34, 0.7)
       ),
-      url('../images/services-background.jpg') no-repeat fixed center / cover;
+      url('../images/services-background-min.jpg') no-repeat fixed center / cover;
     }
     /* Preserve aspect ratio */
     min-width: 100%;
@@ -228,7 +228,7 @@ body, html {
   background-color: $primary-blue;
   color: white;
   cursor: pointer;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
 
   &:hover {
