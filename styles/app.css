@@ -130,7 +130,7 @@ body, html {
   background-size: cover; }
   .parallax.parallax--home {
     background-color: #ededed;
-    background-image: url("../images/homepage-background.jpeg");
+    background-image: url("../images/homepage-background-min.jpeg");
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     /* Preserve aspect ratio */
@@ -138,14 +138,14 @@ body, html {
     min-height: 100%; }
   .parallax.parallax--services {
     background-color: #ededed;
-    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background.jpg") no-repeat scroll center/cover;
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background-min.jpg") no-repeat scroll center/cover;
     /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
     padding-bottom: 5rem; }
     @media all and (min-width: 40em) {
       .parallax.parallax--services {
-        background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background.jpg") no-repeat fixed center/cover; } }
+        background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background-min.jpg") no-repeat fixed center/cover; } }
 
 .overlay {
   background-color: #222;
@@ -276,7 +276,7 @@ body, html {
   background-color: #5497CC;
   color: white;
   cursor: pointer;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px; }
   .scroll-to-top:hover {
     background-color: #367eb7; }
@@ -287,6 +287,9 @@ body, html {
   position: absolute;
   z-index: 10000;
   width: 100%; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
 
 .flex-container {
   display: -webkit-box;
