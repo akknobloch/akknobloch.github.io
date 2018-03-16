@@ -56,7 +56,7 @@ fieldset {
 
   //Add class to containing fieldset or div to display a button
   .input--add-on {
-    display: flex;
+    @include display-flexbox;
 
     .add-on--field,
     .add-on--before,

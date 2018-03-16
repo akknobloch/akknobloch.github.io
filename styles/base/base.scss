@@ -15,7 +15,7 @@ body, html {
 }
 
 .flex-container {
-  display: flex;
+  @include display-flexbox;
 }
 
 .parallax {

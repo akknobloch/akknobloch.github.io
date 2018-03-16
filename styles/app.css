@@ -3,6 +3,101 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter:700");
 /* Core Variables
   =========================================================================== */
+.white-background--lined, .homepage--about-me, .homepage--my-work {
+  height: auto;
+  background-color: #fff;
+  background-image: url(../images/back.svg);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: contain; }
+
+.inner-shadow {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000; }
+
+.content-padding {
+  padding: 1rem; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.row {
+  overflow: auto; }
+
+.row {
+  margin: auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  width: 100%; }
+  .row.row--nested {
+    padding-left: 0; }
+
+.column {
+  padding: 1rem;
+  padding-left: 0 !important; }
+  .column.column--nested {
+    padding-top: calc((1rem) / 2);
+    padding-bottom: calc((1rem) / 2); }
+    @media all and (max-width: 40em) {
+      .column.column--nested {
+        padding-right: 0; } }
+    @media all and (min-width: 40em) {
+      .column.column--nested:last-of-type {
+        padding-right: 0; } }
+  .column.column--full, .column.column--three-fourths, .column.column--two-thirds, .column.column--half, .column.column--third, .column.column--fourth, .column.column--sixth, .column.column--eighth {
+    width: 100%; }
+  @media all and (min-width: 40em) {
+    .column {
+      float: left; }
+      .column.flow-opposite {
+        float: right; }
+      .column.column--full {
+        float: none;
+        width: 100%; }
+      .column.column--three-fourths {
+        width: 75%; }
+      .column.column--two-thirds {
+        width: 66.666%; }
+      .column.column--half {
+        width: 50%; }
+      .column.column--third {
+        width: 33.333%; }
+      .column.column--fourth {
+        width: 25%; }
+      .column.column--sixth {
+        width: 16.666%; }
+      .column.column--eighth {
+        width: 12.5%; } }
+
+.text-align-center {
+  text-align: center; }
+
+.no-margin--top {
+  margin-top: 0 !important; }
+
+.color-blue {
+  color: #5497CC; }
+
+@media all and (max-width: 40em) {
+  .hide-on-mobile {
+    display: none !important; } }
+
+@media all and (min-width: 40em) {
+  .hide-on-tablet {
+    display: none !important; } }
+
+@media all and (min-width: 64em) {
+  .hide-on-desktop {
+    display: none !important; } }
+
+.no-scroll {
+  overflow: hidden; }
+
 body {
   font-family: "Source Sans Pro"; }
 
@@ -20,6 +115,10 @@ body, html {
   line-height: 1.75; }
 
 .flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .parallax {
@@ -189,42 +288,48 @@ body, html {
   z-index: 10000;
   width: 100%; }
 
-.flex-container.navigation {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  justify-content: center;
-  align-items: center; }
-  .flex-container.navigation a.link {
-    text-decoration: none;
-    color: white;
-    font-weight: 400;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease-out;
-    margin: 0 1rem; }
-    .flex-container.navigation a.link:hover {
-      background-color: #5497CC;
-      color: white; }
-  .flex-container.navigation li {
-    padding: 0.5rem 1rem; }
-    .flex-container.navigation li.logo {
-      margin-right: auto; }
-      @media all and (min-width: 40em) {
-        .flex-container.navigation li.logo {
-          margin-right: 0; } }
-    .flex-container.navigation li .nav-logo {
-      width: 100px;
-      background-color: white;
-      padding: 0.5rem;
-      border-radius: 10px; }
-  .flex-container.navigation.navigation--mobile {
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .flex-container.navigation.navigation--mobile a {
-      width: 100%;
-      text-align: center;
-      font-size: 2rem; }
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex-container.navigation {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center; }
+    .flex-container.navigation a.link {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease-out;
+      margin: 0 1rem; }
+      .flex-container.navigation a.link:hover {
+        background-color: #5497CC;
+        color: white; }
+    .flex-container.navigation li {
+      padding: 0.5rem 1rem; }
+      .flex-container.navigation li.logo {
+        margin-right: auto; }
+        @media all and (min-width: 40em) {
+          .flex-container.navigation li.logo {
+            margin-right: 0; } }
+      .flex-container.navigation li .nav-logo {
+        width: 100px;
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 10px; }
+    .flex-container.navigation.navigation--mobile {
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .flex-container.navigation.navigation--mobile a {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem; }
 
 .burger {
   z-index: 10;
@@ -354,7 +459,7 @@ aside {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 10000;
   /* Sit on top */
   padding-top: 50px;
   /* Location of the box */
@@ -479,6 +584,10 @@ fieldset {
   fieldset select {
     cursor: pointer; }
   fieldset .input--add-on {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
     fieldset .input--add-on .add-on--field,
     fieldset .input--add-on .add-on--before,
@@ -495,100 +604,5 @@ fieldset {
     fieldset .input--add-on select.add-on--before {
       padding-right: 2rem;
       flex: none; }
-
-.white-background--lined, .homepage--about-me, .homepage--my-work {
-  height: auto;
-  background-color: #fff;
-  background-image: url(../images/back.svg);
-  background-repeat: repeat-y;
-  background-position: center center;
-  background-size: contain; }
-
-.inner-shadow {
-  -moz-box-shadow: inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000; }
-
-.content-padding {
-  padding: 1rem; }
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.row {
-  overflow: auto; }
-
-.row {
-  margin: auto;
-  max-width: 1200px;
-  padding-left: 1rem;
-  width: 100%; }
-  .row.row--nested {
-    padding-left: 0; }
-
-.column {
-  padding: 1rem;
-  padding-left: 0 !important; }
-  .column.column--nested {
-    padding-top: calc((1rem) / 2);
-    padding-bottom: calc((1rem) / 2); }
-    @media all and (max-width: 40em) {
-      .column.column--nested {
-        padding-right: 0; } }
-    @media all and (min-width: 40em) {
-      .column.column--nested:last-of-type {
-        padding-right: 0; } }
-  .column.column--full, .column.column--three-fourths, .column.column--two-thirds, .column.column--half, .column.column--third, .column.column--fourth, .column.column--sixth, .column.column--eighth {
-    width: 100%; }
-  @media all and (min-width: 40em) {
-    .column {
-      float: left; }
-      .column.flow-opposite {
-        float: right; }
-      .column.column--full {
-        float: none;
-        width: 100%; }
-      .column.column--three-fourths {
-        width: 75%; }
-      .column.column--two-thirds {
-        width: 66.666%; }
-      .column.column--half {
-        width: 50%; }
-      .column.column--third {
-        width: 33.333%; }
-      .column.column--fourth {
-        width: 25%; }
-      .column.column--sixth {
-        width: 16.666%; }
-      .column.column--eighth {
-        width: 12.5%; } }
-
-.text-align-center {
-  text-align: center; }
-
-.no-margin--top {
-  margin-top: 0 !important; }
-
-.color-blue {
-  color: #5497CC; }
-
-@media all and (max-width: 40em) {
-  .hide-on-mobile {
-    display: none !important; } }
-
-@media all and (min-width: 40em) {
-  .hide-on-tablet {
-    display: none !important; } }
-
-@media all and (min-width: 64em) {
-  .hide-on-desktop {
-    display: none !important; } }
-
-.no-scroll {
-  overflow: hidden; }
 
 /*# sourceMappingURL=app.css.map */
