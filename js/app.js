@@ -90,10 +90,10 @@ function MobileScrollToBottom() {
 }
 
 //Keep scrolled effect
-$(window).scroll(function() {
-  var scrolledY = $(window).scrollTop();
-  $('.parallax--home').css('background-position', 'left ' + ((scrolledY)) + 'px');
-});
+// $(window).scroll(function() {
+//   var scrolledY = $(window).scrollTop();
+//   $('.parallax--home').css('background-position', 'left ' + ((scrolledY)) + 'px');
+// });
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};

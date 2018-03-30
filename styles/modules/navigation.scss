@@ -30,6 +30,7 @@
         @media #{$tablet} { margin-right: 0;}
       }
       .nav-logo {
+        min-height: 100px;
         width: 100px;
         background-color: white;
         padding: 0.5rem;

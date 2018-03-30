@@ -19,15 +19,14 @@ body, html {
 }
 
 .parallax {
-  /* Full height */
-  height: 100%;
-  /* Create the parallax scrolling effect */
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ededed;
   &.parallax--home {
-    background-color: #ededed;
-    background-image: url('../images/homepage-background-min.jpeg');
+    background:
+    linear-gradient(
+      rgba(34, 34, 34, 0.7),
+      rgba(34, 34, 34, 0.7)
+    ),
+    url('../images/homepage-background-min.jpeg') no-repeat scroll center / cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     /* Preserve aspect ratio */
@@ -35,21 +34,18 @@ body, html {
     min-height: 100%;
   }
   &.parallax--services {
-    background-color: #ededed;
+    // background:
+    // linear-gradient(
+    //   rgba(34, 34, 34, 0.7),
+    //   rgba(34, 34, 34, 0.7)
+    // ),
+    // url('../images/services-background-min.jpg') no-repeat scroll center / cover;
     background:
     linear-gradient(
       rgba(34, 34, 34, 0.7),
       rgba(34, 34, 34, 0.7)
     ),
-    url('../images/services-background-min.jpg') no-repeat scroll center / cover;
-    @media #{$tablet} {
-      background:
-      linear-gradient(
-        rgba(34, 34, 34, 0.7),
-        rgba(34, 34, 34, 0.7)
-      ),
-      url('../images/services-background-min.jpg') no-repeat fixed center / cover;
-    }
+    url('../images/services-background-min.jpg') no-repeat fixed center / cover;
     /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
@@ -170,9 +166,6 @@ body, html {
     width: 100%;
     max-width: 600px;
   }
-  @media #{$desktop} {
-    margin-bottom: 20rem;
-  }
   .rose-doula {
     @media #{$tablet} {
       float: right;
@@ -187,9 +180,6 @@ body, html {
   bottom: 0;
   z-index: -1;
   -webkit-overflow-scrolling: touch;
-  @media #{$desktop} {
-    position: fixed;
-  }
   .title {
     display: block;
     font-size: 2.5rem;
