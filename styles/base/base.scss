@@ -26,7 +26,7 @@ body, html {
       rgba(34, 34, 34, 0.7),
       rgba(34, 34, 34, 0.7)
     ),
-    url('../images/homepage-background-min.jpeg') no-repeat scroll center / cover;
+    url('../images/homepage-background-min.jpeg') no-repeat fixed center / cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     /* Preserve aspect ratio */
