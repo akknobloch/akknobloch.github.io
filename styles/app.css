@@ -122,27 +122,26 @@ body, html {
   display: flex; }
 
 .parallax {
-  background-color: #ededed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(0);
-  will-change: transform; }
+  background-color: #ededed; }
   .parallax.parallax--home {
-    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/homepage-background-min.jpeg") no-repeat fixed center/cover;
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/homepage-background-min.jpeg") no-repeat scroll center/cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%; }
+    @media all and (min-width: 64em) {
+      .parallax.parallax--home {
+        background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/homepage-background-min.jpeg") no-repeat fixed center/cover; } }
   .parallax.parallax--services {
-    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background-min.jpg") no-repeat fixed center/cover;
+    background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background-min.jpg") no-repeat scroll center/cover;
     /* Preserve aspect ratio */
     min-width: 100%;
     min-height: 100%;
     padding-bottom: 5rem; }
+    @media all and (min-width: 64em) {
+      .parallax.parallax--services {
+        background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url("../images/services-background-min.jpg") no-repeat fixed center/cover; } }
 
 .overlay {
   background-color: #222;
