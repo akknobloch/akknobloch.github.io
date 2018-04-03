@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115899511-1"></script>
@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
   <link rel="stylesheet" type="text/css" href="styles/app.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/modal.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -96,7 +96,7 @@
           accomplished this through setting up a Portfolio section and blog that could be easily updated by
           owner. They are now able to reach many more customers with this custom website design.
         </p>
-        <a href="http://gardenofgraceflorals.com/" target="_blank"><button type="button" name="button" class="button button--primary button--border">Visit Site</button></a>
+        <a href="http://gardenofgraceflorals.com/" target="_blank" class="button button--primary button--border">Visit Site</a>
       </div>
       <div class="column column--half text-align-center">
         <img src="images/my-work/garden-of-grace.png" alt="Garden of Grace Florals" class="my-work--image">
@@ -110,7 +110,7 @@
           This turned into logo design + website design for me. I am excited how great everything turned out! Always love
           giving brand new companies a web presence to expand their customer base.
         </p>
-        <a href="http://jrosedoulaservices.com/" target="_blank"><button type="button" name="button" class="button button--primary button--border">Visit Site</button></a>
+        <a href="http://jrosedoulaservices.com/" target="_blank" class="button button--primary button--border">Visit Site</a>
       </div>
       <div class="column column--half text-align-center">
         <img src="images/my-work/rose-doula.png" alt="Rose Doula Services" class="my-work--image">
@@ -137,7 +137,7 @@
               </fieldset>
 
               <fieldset class="column column--full">
-                <label for="dashing-email">Email</label>
+                <label>Email</label>
                 <input type="email" id="email" name="Email" value="" required="" placeholder="your.name@email.com"/>
               </fieldset>
               <span id="email-invalid" style="display:none">
@@ -165,12 +165,12 @@
 
   </div>
   <section class="footer" >
-    <a class="contact-area" id="myBtn">
+    <div class="contact-area">
       <h2 class="title">Interested in a new website?</h2>
-      <button type="button" name="button" class="button button--transparent white button--large">Contact Me</button>
-    </a>
+      <a class="button button--transparent white button--large" id="myBtn">Contact Me</a>
+    </div>
   </section>
   <div id="contact"></div>
-  <script data-cfasync="false" type="text/javascript" src="js/form-handler.js"></script>
+  <script data-cfasync="false" src="js/form-handler.js"></script>
 </body>
 </html>

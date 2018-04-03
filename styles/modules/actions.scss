@@ -31,6 +31,7 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   margin: 0.05rem 0.25rem;
   padding: 0.75rem 1rem;
   text-align: center;
+  display: block;
 
   @media #{$tablet} {
     display: inline-block;
@@ -74,6 +75,11 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
     &.white {
       border: 2px solid white;
       color: white;
+      &:hover {
+        color: $primary-blue;
+        background-color: white;
+        border: 2px solid white;
+      }
     }
   }
   &.button--large {

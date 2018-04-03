@@ -231,6 +231,9 @@ body, html {
   bottom: 0;
   z-index: -1;
   -webkit-overflow-scrolling: touch; }
+  @media all and (min-width: 40em) {
+    .footer {
+      height: 18rem; } }
   .footer .title {
     display: block;
     font-size: 2.5rem;
@@ -410,7 +413,8 @@ aside {
   font-weight: 600;
   margin: 0.05rem 0.25rem;
   padding: 0.75rem 1rem;
-  text-align: center; }
+  text-align: center;
+  display: block; }
   @media all and (min-width: 40em) {
     .button, button, input[type='submit'], input[type='reset'] {
       display: inline-block;
@@ -443,6 +447,10 @@ aside {
     .button.button--transparent.white, button.button--transparent.white, input[type='submit'].button--transparent.white, input[type='reset'].button--transparent.white {
       border: 2px solid white;
       color: white; }
+      .button.button--transparent.white:hover, button.button--transparent.white:hover, input[type='submit'].button--transparent.white:hover, input[type='reset'].button--transparent.white:hover {
+        color: #5497CC;
+        background-color: white;
+        border: 2px solid white; }
   .button.button--large, button.button--large, input[type='submit'].button--large, input[type='reset'].button--large {
     padding: 1rem;
     font-size: 1.2rem; }

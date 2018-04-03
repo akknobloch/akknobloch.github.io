@@ -189,6 +189,9 @@ body, html {
   left: 0;
   bottom: 0;
   z-index: -1;
+  @media #{$tablet} {
+    height: 18rem;
+  }
   -webkit-overflow-scrolling: touch;
   .title {
     display: block;
