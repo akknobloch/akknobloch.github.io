@@ -16,21 +16,39 @@
   <meta name="keywords" content="website, website design, seo, peoria, illinois, website builder">
   <meta name="author" content="Austin Knobloch">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="stylesheet" type="text/css" href="styles/app.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/modal.js"></script>
+  <script async src="js/app.js"></script>
+  <script async src="js/modal.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 </head>
 <body>
   <button class="scroll-to-top" onclick="ScrollToTop()" id="scrollToTop" title="Go to top">
     <i class="fa fa-angle-up" style="font-size:36px"></i>
   </button>
   <section class="homepage-text">
+    <h1 style="visibility:hidden; height:1px; margin:0;">AK Design</h1>
     <div><span
      class="txt-rotate"
      data-period="2000"
@@ -42,7 +60,7 @@
   <section class="homepage--about-me" id="about">
     <div class="row narrow">
       <div class="column column--half">
-        <h1 class="no-margin--top">ABOUT <span class="color-blue">ME</span></h1>
+        <h2 class="section--title no-margin--top">ABOUT <span class="color-blue">ME</span></h2>
         <p class="p-content">My name is Austin Knobloch and I’m a Website Designer from Peoria, Illinois. I love working with new business
           owners trying to make their idea public to the web for the first time or with established small businesses
           who are looking for a fresh new look. I work to the principle that simple is beautiful, while carefully including the finest details and interactions.
@@ -57,7 +75,7 @@
     <div class="parallax parallax--services">
       <div class="row narrow">
         <div class="column column--full">
-          <h1 class="section--title white">WEBSITE <span class="color-blue">SERVICES</span></h1>
+          <h2 class="section--title white">WEBSITE <span class="color-blue">SERVICES</span></h2>
         </div>
         <div class="column column--third">
           <div class="card design">
@@ -86,7 +104,7 @@
   <section class="homepage--my-work" id="my-work">
     <div class="row narrow">
       <div class="column column--full">
-        <h1 class="section--title">FEATURED <span class="color-blue">WORK</span></h1>
+        <h2 class="section--title">FEATURED <span class="color-blue">WORK</span></h2>
       </div>
     </div>
     <div class="row narrow">
@@ -171,6 +189,6 @@
     </div>
   </section>
   <div id="contact"></div>
-  <script data-cfasync="false" src="js/form-handler.js"></script>
+  <script async data-cfasync="false" src="js/form-handler.js"></script>
 </body>
 </html>
