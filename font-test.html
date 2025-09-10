@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphik Font Test</title>
+    <style>
+        @font-face {
+            font-family: 'Graphik';
+            src: url('/assets/fonts/Graphik-Regular-Trial.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Graphik';
+            src: url('/assets/fonts/Graphik-Medium-Trial.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Graphik';
+            src: url('/assets/fonts/Graphik-Bold-Trial.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        body {
+            font-family: 'Graphik', sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .font-regular { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-bold { font-weight: 700; }
+        
+        .font-thin { font-weight: 100; }
+        .font-light { font-weight: 300; }
+        .font-semibold { font-weight: 600; }
+        .font-black { font-weight: 900; }
+    </style>
+</head>
+<body>
+    <h1>Graphik Font Test</h1>
+    
+    <div class="test-section">
+        <h2>Font Weights Test</h2>
+        <p class="font-thin">Thin (100): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-light">Light (300): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-regular">Regular (400): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-medium">Medium (500): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-semibold">Semibold (600): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-bold">Bold (700): The quick brown fox jumps over the lazy dog</p>
+        <p class="font-black">Black (900): The quick brown fox jumps over the lazy dog</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Sample Text</h2>
+        <p>This is a test of the Graphik font family. If you can see this text in Graphik font, then the font loading is working correctly.</p>
+        <p><strong>Bold text</strong> and <em>italic text</em> should also be working.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Font Loading Status</h2>
+        <p id="font-status">Checking font loading...</p>
+    </div>
+    
+    <script>
+        // Check if Graphik font is loaded
+        document.fonts.ready.then(() => {
+            const graphikLoaded = document.fonts.check('16px Graphik');
+            const status = document.getElementById('font-status');
+            
+            if (graphikLoaded) {
+                status.textContent = '✅ Graphik font is loaded successfully!';
+                status.style.color = 'green';
+            } else {
+                status.textContent = '❌ Graphik font failed to load. Check console for errors.';
+                status.style.color = 'red';
+            }
+        });
+        
+        // Log font loading errors
+        document.fonts.addEventListener('loadingdone', (event) => {
+            console.log('Fonts loaded:', event.fontfaces);
+        });
+        
+        document.fonts.addEventListener('loadingerror', (event) => {
+            console.error('Font loading error:', event);
+        });
+    </script>
+</body>
+</html>
