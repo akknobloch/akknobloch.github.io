@@ -86,7 +86,7 @@ export default function AboutSection() {
           <p className="mb-0">
             When I'm not designing, I'm outside with my family or getting a round of golf in.<br/><br/>
           </p>
-           <p className="mb-0 p-4 bg-blue-50 rounded-lg text-black text-sm border border-blue-200">
+           <p className="mb-0 p-4 bg-blue-50 rounded-lg text-[#595959] text-sm border border-blue-200 leading-relaxed">
              Take a look at a fun vibe coded project I built at the intersection of my two passions: 👨🏼‍💻 design and ⛳️ golf 
            </p>
         </div>
@@ -111,7 +111,7 @@ export default function AboutSection() {
       {/* GolfDashboard - responsive positioning and animation */}
       <div className="lg:absolute lg:bottom-0 lg:left-0 lg:right-0 group">
         <div 
-          className={`relative w-full transition-all duration-500 ease-in-out overflow-visible cursor-pointer lg:cursor-default ${isExpanded ? 'h-[600px]' : 'h-[275px]'} ${isHovered ? 'lg:h-[650px]' : 'lg:h-[275px]'}`}
+          className={`relative w-full transition-all duration-500 ease-in-out overflow-visible cursor-pointer lg:cursor-default ${isExpanded ? 'h-[600px]' : 'h-[200px]'} ${isHovered ? 'lg:h-[650px]' : 'lg:h-[200px]'}`}
           onClick={handleClick}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

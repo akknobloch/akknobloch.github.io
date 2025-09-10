@@ -7,17 +7,11 @@ import ToolsSection from './ToolsSection'
 import CertificationSection from './CertificationSection'
 
 // Image assets from Figma
-const imgRectangle4 = "/assets/2d2f86056ae9e4d3fec601f1233dd143d7e2e197.png";
 const imgVector = "/assets/53174ae8ea4f99c564838144ee905c1db9729c12.svg";
 
 export default function PortfolioPage() {
   return (
     <div className="bg-white box-border flex flex-col gap-16 items-center justify-start px-6 pt-32 pb-16 relative min-h-screen w-full">
-      {/* Background Pattern */}
-      <div 
-        className="absolute bg-repeat bg-[length:400px_400px] bg-top-left h-[691px] left-0 opacity-40 top-0 w-full max-w-[1440px]" 
-        style={{ backgroundImage: `url('${imgRectangle4}')` }} 
-      />
       
       {/* Navigation */}
       <Navigation activeTab="about" />

@@ -38,7 +38,7 @@ export default function GolfDashboard() {
           <div className="bg-emerald-600 box-border content-stretch flex flex-col gap-2.5 h-[132px] items-center justify-center px-6 py-0 relative rounded-bl-[20px] rounded-br-[20px] shrink-0 w-full">
             <div className="content-stretch flex gap-2.5 items-start justify-center relative shrink-0">
               <div className="relative shrink-0 size-6">
-                <LandPlot className="w-full h-full text-white" />
+                <LandPlot className="w-full h-full" style={{ color: '#fbbf24' }} />
               </div>
               <div className="font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[22px] text-nowrap text-white tracking-[-0.33px]">
                 <p className="leading-[28px] whitespace-pre">Golf Trip Dashboard</p>
