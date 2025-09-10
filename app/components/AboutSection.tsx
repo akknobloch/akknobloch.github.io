@@ -68,13 +68,13 @@ export default function AboutSection() {
       className="bg-[#f7f7f9] box-border flex flex-col gap-4 items-center justify-start overflow-clip pt-[32px] px-[32px] relative rounded-[32px] h-full min-h-[250px] w-full"
     >
       <div 
-        className="flex flex-col gap-2 w-full"
+        className="flex flex-col gap-6 w-full"
       >
         <div className="font-graphik font-medium leading-[0] min-w-full not-italic relative shrink-0 text-[32px] text-black tracking-[-0.48px]">
           <p className="leading-[normal]">A little about me</p>
         </div>
         
-        <div className="font-graphik font-normal leading-[24px] not-italic relative text-[#595959] text-[18px] tracking-[-0.27px] w-full">
+        <div className="font-graphik font-normal leading-[32px] not-italic relative text-[#595959] text-[18px] tracking-[-0.27px] w-full">
           <p className="mb-2">
             I'm a product designer obsessed with how digital experiences work. I download every interesting app (as long as my iPhone storage allows it) just to dissect and learn from their design choices.
           </p>
