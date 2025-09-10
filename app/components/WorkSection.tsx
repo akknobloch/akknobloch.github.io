@@ -46,9 +46,8 @@ export default function WorkSection({
 
   return (
     <div 
-      className={`box-border flex flex-col gap-4 items-start justify-start pl-[32px] pt-[32px] pb-[32px] relative rounded-[32px] overflow-hidden ${
-        fixedHeight ? 'h-[250px]' : 'h-full min-h-[250px]'
-      } ${workUrl ? 'cursor-pointer' : ''}`}
+      className={`box-border flex flex-col gap-4 items-start justify-start pl-[32px] pt-[32px] pb-[32px] relative rounded-[32px] overflow-hidden h-full min-h-[250px]
+        ${workUrl ? 'cursor-pointer' : ''}`}
       style={{ background: backgroundStyle }}
       onClick={handleCardClick}
     >
@@ -84,18 +83,20 @@ export default function WorkSection({
         {customContent ? (
           customContent
         ) : showImage ? (
-          <div className={` ${
-            fixedHeight ? '' : 'lg:justify-start'
-          }`}>
-            <img 
-              src={imageSrc || "/assets/peak-coach/promo-image.svg"} 
-              alt={`${title} promo`} 
-              className={`w-full object-cover ${
-                fixedHeight 
-                  ? 'h-full object-center pr-[32px]' 
-                  : 'h-[300px] object-center lg:object-left'
-              }`}
-            />
+          <div className="flex">
+            <div className={`absolute ${
+              fixedHeight ? '' : 'lg:justify-start'
+            }`}>
+              <img 
+                src={imageSrc || "/assets/peak-coach/promo-image.svg"} 
+                alt={`${title} promo`} 
+                className={`w-full object-cover ${
+                  fixedHeight 
+                    ? 'h-full object-center pr-[32px]' 
+                    : 'h-[300px] object-center lg:object-left'
+                }`}
+              />
+            </div>
           </div>
         ) : null}
       </>

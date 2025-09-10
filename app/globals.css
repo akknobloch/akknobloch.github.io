@@ -149,6 +149,10 @@
   font-display: swap;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Graphik', 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;

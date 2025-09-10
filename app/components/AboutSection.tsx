@@ -65,26 +65,24 @@ export default function AboutSection() {
 
   return (
     <div 
-      className="bg-[#f7f7f9] box-border flex flex-col gap-4 items-center justify-between overflow-clip pt-[32px] px-[32px] relative rounded-[32px] h-full min-h-[250px]"
+      className="bg-[#f7f7f9] box-border flex flex-col gap-4 items-center justify-start overflow-clip pt-[32px] px-[32px] relative rounded-[32px] h-full min-h-[250px] w-full"
     >
       <div 
-        className="flex flex-col gap-4 w-full"
+        className="flex flex-col gap-2 w-full"
       >
         <div className="font-graphik font-medium leading-[0] min-w-full not-italic relative shrink-0 text-[32px] text-black tracking-[-0.48px]">
           <p className="leading-[normal]">A little about me</p>
         </div>
         
-        <div className="font-graphik font-normal leading-[28px] not-italic relative text-[#595959] text-[18px] tracking-[-0.27px] w-full">
-          <p className="mb-0">
+        <div className="font-graphik font-normal leading-[24px] not-italic relative text-[#595959] text-[18px] tracking-[-0.27px] w-full">
+          <p className="mb-2">
             I'm a product designer obsessed with how digital experiences work. I download every interesting app (as long as my iPhone storage allows it) just to dissect and learn from their design choices.
           </p>
-          <p className="mb-0">&nbsp;</p>
-          <p className="mb-0">
+          <p className="mb-2">
             My favorite part is building something that genuinely improves people's lives. Nothing beats hearing that your design saved someone time or reduced their stress.
           </p>
-          <p className="mb-0">&nbsp;</p>
-          <p className="mb-0">
-            When I'm not designing, I'm outside with my family or getting a round of golf in.<br/><br/>
+          <p className="mb-4">
+            When I'm not designing, I'm outside with my family or getting a round of golf in.
           </p>
            <p className="mb-0 p-4 bg-blue-50 rounded-lg text-[#595959] text-sm border border-blue-200 leading-relaxed">
              Take a look at a fun vibe coded project I built at the intersection of my two passions: 👨🏼‍💻 design and ⛳️ golf 

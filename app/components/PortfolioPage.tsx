@@ -11,38 +11,39 @@ const imgVector = "/assets/53174ae8ea4f99c564838144ee905c1db9729c12.svg";
 
 export default function PortfolioPage() {
   return (
-    <div className="bg-white box-border flex flex-col gap-16 items-center justify-start px-6 pt-32 pb-16 relative min-h-screen w-full">
+    <div className="bg-white box-border flex flex-col gap-8 items-center justify-start px-6 pt-32 pb-16 relative w-full h-full">
       
       {/* Navigation */}
       <Navigation activeTab="about" />
       
-      {/* Main Content Grid */}
-      <div className="gap-8 lg:gap-4 grid grid-cols-1 lg:grid-cols-4 w-full max-w-[1280px] items-stretch flex-1 grid-rows-[1fr] min-h-0">
-        {/* About Section - Spans 2 columns, full height */}
-        <div className="lg:col-span-2 lg:row-span-1 flex flex-col gap-4">
+      {/* Main Content - Two Column Layout */}
+      <div className="w-full max-w-[1280px] flex flex-col lg:flex-row gap-6 min-h-[600px] h-full">
+        
+        {/* Left Column - Single About Card */}
+        <div className="w-full lg:w-1/2">
           <AboutSection />
         </div>
 
-        {/* Subgrid */}
-        <div className="grid grid-cols-subgrid lg:col-span-2 lg:row-span-1 grid-rows-[1fr_1fr_1fr] h-full gap-8 lg:gap-4">
-
-          {/* Work Section - Spans 1 column, 2 rows (full height) */}
-          <div className="lg:col-span-1 lg:row-span-2">
+        {/* Right Column - Mobile Stack / Desktop 2x3 Subgrid */}
+        <div className="w-full lg:w-1/2 flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:h-full">
+          
+          {/* Peak Coach - Mobile: stacked, Desktop: Top left (spans 1x2) */}
+          <div className="lg:col-span-1 lg:row-span-2 h-full">
             <WorkSection title="Peak Coach" subtitle="AI Coach for Engagement Data" workUrl="/work/ai-coach" />
           </div>
 
-          {/* Tools Section - Spans 1 column, 1 row */}
-          <div className="lg:col-span-1 lg:row-span-1">
+          {/* Tools - Mobile: stacked, Desktop: Top right (spans 1x1) */}
+          <div className="lg:col-span-1 lg:row-span-1 h-full">
             <ToolsSection />
           </div>
 
-          {/* Certification Section - Spans 1 column, 1 row */}
-          <div className="lg:col-span-1 lg:row-span-1">
+          {/* Certification - Mobile: stacked, Desktop: Middle right (spans 1x1) */}
+          <div className="lg:col-span-1 lg:row-span-1 h-full">
             <CertificationSection />
           </div>
 
-          {/* Work 2 Section - Spans 2 columns, 1 row */}
-          <div className="lg:col-span-2 lg:row-span-1">
+          {/* Executive Insights - Mobile: stacked, Desktop: Bottom (spans 2x1) */}
+          <div className="lg:col-span-2 lg:row-span-1 h-full">
             <WorkSection 
               title="Executive Insights" 
               subtitle="Strategic Level view for the C Suite" 
@@ -52,9 +53,9 @@ export default function PortfolioPage() {
               imageSrc="/assets/insights/Macbook-exec.png"
             />
           </div>
-          
 
-        </div>        
+        </div>
+        
       </div>
     </div>
   )
