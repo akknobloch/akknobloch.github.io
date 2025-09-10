@@ -51,7 +51,7 @@ export default function PortfolioPage() {
           <div className="lg:col-span-2 lg:row-span-1">
             <WorkSection 
               title="Executive Insights" 
-              subtitle="Strategic Level view for the C Suite Persona" 
+              subtitle="Strategic Level view for the C Suite" 
               workUrl="/work/executive-insights" 
               showImage={true}
               fixedHeight={true}

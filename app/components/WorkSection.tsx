@@ -27,7 +27,14 @@ export default function WorkSection({
 }: WorkSectionProps) {
   const router = useRouter()
 
-  const handleIconClick = () => {
+  const handleCardClick = () => {
+    if (workUrl) {
+      router.push(workUrl)
+    }
+  }
+
+  const handleIconClick = (e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent card click when clicking the icon
     if (workUrl) {
       router.push(workUrl)
     }
@@ -41,8 +48,9 @@ export default function WorkSection({
     <div 
       className={`box-border flex flex-col gap-4 items-start justify-start pl-[32px] pt-[32px] pb-[32px] relative rounded-[32px] overflow-hidden ${
         fixedHeight ? 'h-[250px]' : 'h-full min-h-[250px]'
-      }`}
+      } ${workUrl ? 'cursor-pointer' : ''}`}
       style={{ background: backgroundStyle }}
+      onClick={handleCardClick}
     >
       <div className="flex flex-col gap-2 w-full pr-[32px]">
         <div className="flex items-center justify-between w-full">
@@ -52,7 +60,7 @@ export default function WorkSection({
           {workUrl && (
             <button 
               onClick={handleIconClick}
-              className="flex-shrink-0 cursor-pointer hover:opacity-70 transition-opacity"
+              className="flex-shrink-0 cursor-pointer hover:opacity-70 transition-opacity z-10"
               aria-label={`View ${title} work`}
             >
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
